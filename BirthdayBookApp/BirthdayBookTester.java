@@ -4,6 +4,7 @@ public class BirthdayBookTester {
     /* Create a birthday instance with month and day. */
     Birthday bd01 = new Birthday(1, 11);
     System.out.println("(" + bd01.getMonth() + ", " + bd01.getDay() + ")");
+    System.out.println();
 
     System.out.println("(02)----------------------------------------");
     Birthday bd02 = new Birthday(2, 12);
@@ -29,6 +30,7 @@ public class BirthdayBookTester {
     System.out.println(bd10.toString());
     System.out.println(bd11.toString());
     System.out.println(bd12.toString());
+    System.out.println();
 
     System.out.println("(03)----------------------------------------");
     Birthday bd13 = new Birthday(6, 16);
@@ -37,6 +39,7 @@ public class BirthdayBookTester {
     System.out.println("bd13: " + bd13.toString());
     System.out.println("Contents of bd06 and bd13 are equal: " + bd06.equals(bd13));
     System.out.println("Contents of bd07 and bd13 are equal: " + bd07.equals(bd13));
+    System.out.println();
 
     System.out.println("(04)----------------------------------------");
     /* Create a new entry using a name and a birthday. */
@@ -44,6 +47,7 @@ public class BirthdayBookTester {
     System.out.println("Entry e1's name: " + e1.getName());
     System.out.println("Entry e1's birthday: " + e1.getBirthday().toString());
     System.out.println("Entry e1's string value: " + e1.toString());
+    System.out.println();
 
     System.out.println("(05)----------------------------------------");
     /* Create a new entry using a name, a birth month, and a birth day. */
@@ -51,6 +55,7 @@ public class BirthdayBookTester {
     System.out.println("Entry e2's name: " + e2.getName());
     System.out.println("Entry e2's birthday: " + e2.getBirthday().toString());
     System.out.println("Entry e2's string value: " + e2.toString());
+    System.out.println();
 
     System.out.println("(06)----------------------------------------");
     Entry e3 = new Entry("A", 1, 11);
@@ -59,6 +64,7 @@ public class BirthdayBookTester {
     System.out.println("e3: " + e3.toString());
     System.out.println("Entries e1 and e2 are equal: " + e1.equals(e2));
     System.out.println("Entries e1 and e3 are equal: " + e1.equals(e3));
+    System.out.println();
 
     System.out.println("(07)----------------------------------------");
     e2.setName("A");
@@ -69,6 +75,8 @@ public class BirthdayBookTester {
     System.out.println("e3: " + e3.toString());
     System.out.println("Entries e1 and e2 are equal: " + e1.equals(e2));
     System.out.println("Entries e1 and e3 are equal: " + e1.equals(e3));
+    System.out.println();
+
 
     System.out.println("(08)----------------------------------------");
     /* Change e3's birthday to the same as bd03. */
@@ -78,19 +86,23 @@ public class BirthdayBookTester {
     System.out.println("e3: " + e3.toString());
     System.out.println("Entries e1 and e2 are equal: " + e1.equals(e2));
     System.out.println("Entries e1 and e3 are equal: " + e1.equals(e3));
+    System.out.println();
 
     System.out.println("(09)----------------------------------------");
     BirthdayBook bb = new BirthdayBook();
     System.out.println("Number of entries: " + bb.getNumberOfEntries());
     System.out.println("Returned number of entries: " + bb.getEntries().length);
+    System.out.println();
 
     System.out.println("(10)----------------------------------------");
     System.out.println(bb.toString());
+    System.out.println();
 
     System.out.println("(11)----------------------------------------");
     System.out.println("Name A exists in book: " + bb.nameExists("A"));
     System.out.println("Name B exists in book: " + bb.nameExists("B"));
     System.out.println("Name C exists in book: " + bb.nameExists("C"));
+    System.out.println();
 
     System.out.println("(12)----------------------------------------");
     Birthday bdOfA = bb.getBirthday("A");
@@ -102,6 +114,7 @@ public class BirthdayBookTester {
     System.out.println("Birthday of A: " + bdOfA); 
     System.out.println("Birthday of B: " + bdOfB);
     System.out.println("Birthday of C: " + bdOfC);
+    System.out.println();
 
     System.out.println("(13)----------------------------------------");
     /* Get reminders on birthdays.
@@ -110,6 +123,7 @@ public class BirthdayBookTester {
     System.out.println("Number of reminders of bd13 (from empty book): " + toRemind.length);
     toRemind = bb.getReminders(6, 16);
     System.out.println("Number of reminders of June 16 (from empty book): " + toRemind.length);
+    System.out.println();
 
     System.out.println("(14)----------------------------------------");
     /* Remove entries from the book.
@@ -121,6 +135,7 @@ public class BirthdayBookTester {
     bb.removeEntry("D");
     System.out.println("Number of entries: " + bb.getNumberOfEntries());
     System.out.println("Returned number of entries: " + bb.getEntries().length);
+    System.out.println();
 
     System.out.println("(15)----------------------------------------");
     /* Add new entries to the book.
@@ -134,6 +149,7 @@ public class BirthdayBookTester {
     System.out.println("First returned entry: " + bb.getEntries()[0].toString());
     System.out.println("Second returned entry: " + bb.getEntries()[1].toString());
     System.out.println("Third returned entry: " + bb.getEntries()[2].toString());
+    System.out.println();
 
     System.out.println("(16)----------------------------------------");
     System.out.println(bb.toString());
@@ -142,6 +158,7 @@ public class BirthdayBookTester {
     System.out.println("Name A exists in book: " + bb.nameExists("A"));
     System.out.println("Name B exists in book: " + bb.nameExists("B"));
     System.out.println("Name C exists in book: " + bb.nameExists("C"));
+    System.out.println();
 
     System.out.println("(18)----------------------------------------");
     bdOfA = bb.getBirthday("A");
@@ -151,6 +168,7 @@ public class BirthdayBookTester {
     System.out.println("Birthday of A: " + bdOfA.toString()); 
     System.out.println("Birthday of B: " + bdOfB.toString());
     System.out.println("Birthday of C: " + bdOfC.toString());
+    System.out.println();
 
     System.out.println("(19)----------------------------------------");
     /* Return names of persons whose birthdays are January 16. 
@@ -158,6 +176,7 @@ public class BirthdayBookTester {
      */
     toRemind = bb.getReminders(1, 16);
     System.out.println("Number of reminders of January 16: " + toRemind.length);
+    System.out.println();
 
     System.out.println("(20)----------------------------------------");
     toRemind = bb.getReminders(1, 11);
@@ -166,6 +185,7 @@ public class BirthdayBookTester {
      */
     System.out.println("Number of reminders of January 11: " + toRemind.length);
     System.out.println("First person to remind: " + toRemind[0]);
+    System.out.println();
 
     System.out.println("(21)----------------------------------------");
     toRemind = bb.getReminders(6, 16);
@@ -175,6 +195,7 @@ public class BirthdayBookTester {
     System.out.println("Number of reminders of June 16: " + toRemind.length);
     System.out.println("First person to remind: " + toRemind[0]);
     System.out.println("Second person to remind: " + toRemind[1]);
+    System.out.println();
 
     System.out.println("(22)----------------------------------------");
     /* removing non-existing name: no effect */ 
@@ -192,6 +213,7 @@ public class BirthdayBookTester {
      * no entries added so far have this birthday. 
      */
     System.out.println("Number of reminders of January 11: " + toRemind.length); 
+    System.out.println();
 
     System.out.println("(25)----------------------------------------");
     /* removing existing name: remove the associated entry */
@@ -201,6 +223,7 @@ public class BirthdayBookTester {
     System.out.println("(26)----------------------------------------");
     System.out.println("B's birthday: " + bb.getBirthday("B").toString());
     System.out.println("C's birthday: " + bb.getBirthday("C"));
+    System.out.println();
 
     System.out.println("(27)----------------------------------------");
     Birthday bd = new Birthday(6, 16);
@@ -210,6 +233,7 @@ public class BirthdayBookTester {
      */
     System.out.println("Number of reminders of June 16: " + toRemind.length);
     System.out.println("First person to remind: " + toRemind[0]);
+    System.out.println();
 
     System.out.println("(28)----------------------------------------");
     bb.addEntry("D", bd04);
@@ -220,6 +244,7 @@ public class BirthdayBookTester {
     toRemind = bb.getReminders(bd04);
     System.out.println("Number of reminders for bd04: " + toRemind.length);
     System.out.println("First person to remind: " + toRemind[0]);
+    System.out.println();
 
     System.out.println("(30)----------------------------------------");
     /* Adding an entry whose name already exists 
@@ -233,17 +258,20 @@ public class BirthdayBookTester {
     System.out.println("Number of reminders for April 14: " + toRemind.length);
     System.out.println("First person to remind: " + toRemind[0]);
     System.out.println("Second person to remind: " + toRemind[1]);
+    System.out.println();
 
     System.out.println("(32)----------------------------------------");
     /* Non-empty and empty books are not equal. */
     BirthdayBook bb2 = new BirthdayBook();
     System.out.println("bb and bb2 are equal: " + bb.equals(bb2));
+    System.out.println();
 
     System.out.println("(33)----------------------------------------");
     /* Non-empty books of different sizes are not equal. */
     bb2.addEntry("B", 6, 16);
     bb2.addEntry("D", 4, 14);
     System.out.println("bb and bb2 are equal: " + bb.equals(bb2));
+    System.out.println();
 
     System.out.println("(34)----------------------------------------");
     /* Non-empty books, 
@@ -252,10 +280,13 @@ public class BirthdayBookTester {
      */
     bb2.addEntry("E", bd04);
     System.out.println("bb and bb2 are equal: " + bb.equals(bb2));
+    System.out.println();
 
     System.out.println("(35)----------------------------------------");
     /* Non-empty books of different sizes are not equal. */
     bb2.addEntry("F", 10, 15);
     System.out.println("bb and bb2 are equal: " + bb.equals(bb2));
+    System.out.println();
+    
   }
 }

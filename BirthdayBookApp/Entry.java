@@ -1,18 +1,18 @@
 
 public class Entry {
-	
+
 	private String name;
 	private Birthday birthday;
 	
-	public Entry(String name, Birthday birthday) {
-		this.name = name;
-		this.birthday = birthday;
+	public Entry (String n, Birthday bd) {
+		this.name = n;
+		this.birthday = bd;
 	}
 	
-	public Entry(String name, int month, int day) {
-		this.name = name;
-		Birthday birthday = new Birthday(month, day);
-		this.birthday = birthday;
+	public Entry (String n, int m, int d) {
+		this.name = n;
+		Birthday bd = new Birthday(m, d);
+		this.birthday = bd;
 	}
 	
 	public String getName() {
@@ -23,32 +23,31 @@ public class Entry {
 		return this.birthday;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public void setBirthday(int month, int day) {
-		Birthday birthday = new Birthday (month, day);
-		this.birthday = birthday;
-	}
-	
-	public void setBirthday(Birthday birthday) {
-		this.birthday = birthday;
-	}
-	
-	@Override
 	public String toString() {
-		return this.name + " was born on " + this.birthday.toString();
+		String m = this.name + " was born on " + this.birthday.toString();
+		return m;
+	}
+	
+	public void setName (String n) {
+		this.name = n;
+	}
+	
+	public void setBirthday (int m, int d) {
+		Birthday bd = new Birthday (m, d);
+		this.birthday = bd;
+	}
+	
+	public void setBirthday (Birthday bd) {
+		this.birthday = bd;
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
 		
-		if (this == obj) { return true; }
-		if (obj == null || this.getClass() != obj.getClass()) { return false; }
-		
+		if(this == obj) { return true; }
+		if(obj == null || this.getClass() != obj.getClass()) { return false; }
 		Entry other = (Entry) obj;
 		
-		return this.name.equals(other.name) && this.birthday.equals(other.getBirthday());
+		return this.getName().equals(other.getName()) && this.getBirthday().equals(other.getBirthday());
 	}
 }
